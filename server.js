@@ -6,6 +6,9 @@ const app = express();
 // call onnect Database
 connectDB();
 
+// Init Middleware
+app.use(express.json({ extended: false }));
+
 app.get("/", (req, res) =>
   res.json({
     msg: "Welcom to Amjad App",
