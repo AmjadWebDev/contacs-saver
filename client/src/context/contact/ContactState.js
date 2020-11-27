@@ -26,14 +26,14 @@ const ContactState = (props) => {
         name: "Hamza Ab",
         email: "hamza@live.com",
         phone: "012-345-456",
-        type: "pro",
+        type: "professional",
       },
       {
         id: 4,
         name: "Tarek naj",
         email: "tarek@live.com",
         phone: "012-345-789",
-        type: "pro",
+        type: "professional",
       },
     ],
   };
