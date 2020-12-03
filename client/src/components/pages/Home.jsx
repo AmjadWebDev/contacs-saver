@@ -12,14 +12,17 @@ const Home = () => {
     // eslint-disable-next-line
   });
   return (
-    <div className="grid-2">
-      <div>
-        <ContactForm />
+    <div>
+      <div className="grid-2">
+        <div>
+          <ContactForm />
+        </div>
+        <div>
+          <ContactFilter />
+          <Contacts />
+        </div>
       </div>
-      <div>
-        <ContactFilter />
-        <Contacts />
-      </div>
+      <p className="last">Created by: Amjad Alsamman - 2020</p>
     </div>
   );
 };

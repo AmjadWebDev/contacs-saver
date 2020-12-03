@@ -6,9 +6,9 @@ const ContactItem = ({ contact }) => {
   const contactContext = useContext(ContactContext);
   const { deleteContact, setCurrent, clearCurrent } = contactContext;
 
-  const { name, id, email, type, phone } = contact;
+  const { name, _id, email, type, phone } = contact;
   const onDelete = () => {
-    deleteContact(id);
+    deleteContact(_id);
     clearCurrent();
   };
 
@@ -24,12 +24,14 @@ const ContactItem = ({ contact }) => {
         {email && (
           <li>
             <i className="fas fa-envelope-open" />
+            &nbsp;
             {email}
           </li>
         )}
         {phone && (
           <li>
             <i className="fas fa-phone" />
+            &nbsp;
             {phone}
           </li>
         )}
