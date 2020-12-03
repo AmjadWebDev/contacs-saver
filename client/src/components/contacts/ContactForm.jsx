@@ -48,8 +48,10 @@ const ContactForm = () => {
       <input type="email" name="email" value={email} placeholder="Email" onChange={onChange} />
       <input type="text" name="phone" value={phone} placeholder="Phone" onChange={onChange} />
       <h5>Contact Type</h5>
-      <input type="radio" name="type" value="personal" checked={type === "personal"} onChange={onChange} /> Personal
-      <input type="radio" name="type" value="professional" checked={type === "professional"} onChange={onChange} /> Professional
+      <input type="radio" name="type" value="personal" checked={type === "personal"} onChange={onChange} />
+      &nbsp; Personal &nbsp;
+      <input type="radio" name="type" value="professional" checked={type === "professional"} onChange={onChange} />
+      &nbsp; Professional
       <div>
         <input type="submit" value={current ? "Update Contact" : "Add Contact"} className="btn btn-primary btn-block" />
       </div>
