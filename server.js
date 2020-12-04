@@ -1,11 +1,22 @@
 const express = require("express");
 const connectDB = require("./config/db");
 const path = require("path");
+const mongoose = require("mongoose");
 
 const app = express();
 
 // call onnect Database
 connectDB();
+
+// Connect to mongo
+mongoose
+  .connect(db, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useCreateIndex: true,
+  })
+  .then(() => console.log("MongoDB Connected..."))
+  .catch((err) => console.error(err));
 
 // Init Middleware
 app.use(express.json({ extended: false }));
